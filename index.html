@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'self' https://0.peerjs.com wss://0.peerjs.com; base-uri 'none'; form-action 'none'">
+<title>Galaxy</title>
+<style>
+  #gate { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(#0d122055, #0d1220cc), url(bg.jpg) center / cover no-repeat, #0d1220; color: #e6e9f2; font: 16px system-ui, sans-serif; z-index: 1000; }
+  #gate form { background: #151c30e6; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); border: 1px solid #f2c14e55; padding: 28px; border-radius: 12px; width: min(320px, 90vw); box-shadow: 0 8px 28px #0008; }
+  #gate h1 { margin: 0 0 16px; font-size: 22px; letter-spacing: 2px; color: #f2c14e; }
+  #gate input[type=password], #gate button { width: 100%; box-sizing: border-box; padding: 10px; margin-top: 10px; border-radius: 6px; border: 1px solid #2a3350; background: #1a2136; color: #e6e9f2; font-size: 16px; }
+  #gate button { background: #3b5bdb; border: 0; cursor: pointer; }
+  #gate label.r { display: flex; gap: 8px; align-items: center; margin-top: 12px; font-size: 14px; color: #aab3cc; }
+  #gate .m { color: #ff8a8a; min-height: 1.2em; margin-top: 10px; font-size: 14px; }
+  body { background: #0d1220; margin: 0; }
+</style>
+</head>
+<body>
+<div id="gate"><form id="gate-form" autocomplete="off">
+  <h1>GALAXY</h1>
+  <label for="gate-code">Access code</label>
+  <input id="gate-code" type="password" autocomplete="current-password" required maxlength="100" autofocus>
+  <label class="r"><input id="gate-remember" type="checkbox" checked> Remember on this device</label>
+  <button id="gate-go">Enter</button>
+  <div class="m" id="gate-msg"></div>
+</form></div>
+<div id="app"></div>
+<div id="zoom"></div>
+<div id="modal" class="hidden"></div>
+<div id="modal2" class="hidden"></div>
+<div id="minbar" class="hidden"></div>
+<div id="toast"></div>
+<script src="loader.js"></script>
+</body>
+</html>
